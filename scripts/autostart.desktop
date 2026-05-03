@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=NutriFit Kiosk
+Exec=/usr/local/bin/start-chromium-kiosk.sh
+X-GNOME-Autostart-enabled=true
