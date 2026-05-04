@@ -1,6 +1,6 @@
 # Dossier de Choix Technique - Borne Interactive NutriFit (Mode Kiosk)
 
-> **Auteur :** Edib Saoud
+> **Auteur :** Équipe SISR - IRIS Mediaschool  
 > **Date :** 03/05/2026  
 > **Version :** 1.0  
 > **Statut :** Validé
@@ -71,9 +71,9 @@ Comment concevoir une borne interactive qui soit :
 │      Borne Interactive NutriFit     │
 │     (Xubuntu 22.04 LTS / x86-64)    │
 ├─────────────────────────────────────┤
-│  Niveau Virtualisation              │
-│  └─ Machine Virtuelle VirtualBox    │
-│     (2 vCPU, 4GB RAM, 20GB Disque)  │
+│  Niveau Matériel                    │
+│  └─ Intel Celeron / 4GB RAM / 128GB │
+│     SSD                             │
 ├─────────────────────────────────────┤
 │  Système d'Exploitation             │
 │  └─ Xubuntu Desktop (XFCE)          │
@@ -90,20 +90,41 @@ Comment concevoir une borne interactive qui soit :
 └─────────────────────────────────────┘
 ```
 
+### Schéma Réseau
+
+```mermaid
+graph TD
+    A["Utilisateur <br/>(Écran tactile)"] -->|Interaction| B["Borne Kiosk <br/>(Xubuntu)"]
+    B -->|Affiche| C["Navigateur Chromium <br/>(Plein écran)"]
+    C -->|Requêtes HTTP| D["Application NutriFit <br/>(Web App)"]
+    D -->|Données| E["Backend / Base de données"]
+    
+    F["Admin Système"] -->|SSH (sécurisé)| B
+    F -->|Maintenance| G["Image de Restauration<br/>(USB / NAS)"]
+    
+    style A fill:#e1f5ff
+    style B fill:#fff3e0
+    style C fill:#f3e5f5
+    style D fill:#c8e6c9
+    style E fill:#ffebee
+    style F fill:#ffe0b2
+    style G fill:#ffe0b2
+```
+
 ---
 
 ## 4. Pré-requis Matériels et Logiciels
 
-### Configuration Machine Virtuelle (VirtualBox)
+### Configuration Matérielle Retenue
 
 | Composant | Spécification | Justification |
 |:---|:---:|:---|
-| **Hyperviseur** | Oracle VM VirtualBox | Gratuit, facile à déployer pour la maquette |
-| **vCPU** | 2 cœurs | Suffisant pour faire tourner Chromium fluidement |
-| **Mémoire RAM** | 4 GB | Recommandé pour Xubuntu + navigateur web |
-| **Stockage** | 20 GB (Allocation dynamique) | Suffisant pour l'OS et les applications |
-| **Réseau** | Accès par pont (Bridge) ou NAT | Permet l'accès internet et SSH depuis l'hôte |
-| **Affichage** | 128 MB VRAM, accélération 3D | Pour la fluidité de l'interface graphique |
+| **Processeur** | Intel Celeron N5105 (2.0 GHz) | Bonne performance / faible consommation |
+| **Mémoire RAM** | 4 GB DDR4 | Suffisant pour Xubuntu + Chromium |
+| **Stockage** | 128 GB SSD NVMe | Démarrage rapide (~30s) |
+| **Connectivité** | Ethernet + WiFi | Flexibilité réseau |
+| **Écran** | 21-24" Tactile 1080p | Ergonomie utilisateur |
+| **Clavier/Souris** | Optionnel (accès admin via SSH) | Mode kiosk ne nécessite que l'écran tactile |
 
 ### Dépendances Logicielles
 
@@ -124,7 +145,7 @@ Xubuntu 22.04 LTS (Jammy)
 |:---|:---:|:---:|:---|
 | Contournement du mode Kiosk (Alt+Tab, Alt+F2) | Élevé | Faible | Désactivation des raccourcis système, restrictions session |
 | Crash navigateur Chromium | Moyen | Moyen | Redémarrage manuel de la session (procédure validée) |
-| Perte d'affichage (écran noir, déconnexion) | Élevé | Faible | Test de stabilité sur 48h, procédure de restauration snapshot |
+| Perte d'affichage (écran noir, déconnexion) | Élevé | Faible | Test de stabilité sur 48h, procédure de restauration image |
 | Accès SSH compromis | Très élevé | Très faible | SSH réservé admin, clé d'accès, firewall local |
 | Dérive de configuration (updates système) | Moyen | Faible | Gel des mises à jour critiques, documentation de base |
 
@@ -138,7 +159,7 @@ Xubuntu 22.04 LTS (Jammy)
 - ✅ **Mode Chromium full-screen** : Barre d'adresse, boutons cachés
 - ✅ **Autostart controlé** : Lancement automatique via fichier `.desktop` sécurisé
 - ✅ **Firewall local** : Accès SSH restreint à l'adresse admin
-- ✅ **Snapshots** : Sauvegarde rapide de l'état de la VM en cas de problème
+- ✅ **Image de restauration** : Sauvegarde système rapide en cas de problème
 
 ---
 
@@ -147,13 +168,13 @@ Xubuntu 22.04 LTS (Jammy)
 ### Fichiers Fournis
 1. **Procédure d'Installation** (`02_PROCEDURE_INSTALLATION.md`) → Technicien SISR
 2. **Guide Utilisateur** (`03_MODE_OPERATOIRE.md`) → Support technique
-3. **Snapshots de la VM** (VirtualBox) → Restauration rapide
+3. **Image système** (USB ou archive compressée) → Restauration rapide
 4. **Scripts Bash** (autostart, restore) → Automation
 
 ### Contrats d'Exploitation
 - **Démarrage** : < 45 secondes
 - **MTBF** (Mean Time Between Failures) : > 720 heures (1 mois)
-- **RTO** (Recovery Time Objective) : < 1 minute (restauration de Snapshot)
+- **RTO** (Recovery Time Objective) : < 10 minutes (restauration USB)
 - **Disponibilité cible** : 99% durant heures d'exploitation
 
 ---
@@ -168,4 +189,3 @@ La solution **Xubuntu + Chromium Kiosk** répond à tous les critères fonctionn
 
 **Décision** : Solution approuvée et déployée en production pour le projet NutriFit.
 
----

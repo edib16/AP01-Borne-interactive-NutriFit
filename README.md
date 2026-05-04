@@ -1,5 +1,7 @@
 # Réalisation Professionnelle (RP01) - Borne Kiosk NutriFit
 
+> 🌐 **Aperçu Visuel :** Retrouvez une présentation illustrée de ce projet sur mon portfolio : [edib16.github.io/Portfolio/#RP01](https://edib16.github.io/Portfolio/#RP01)
+
 **Auteur :** Edib
 **Formation :** BTS SIO (Services Informatiques aux Organisations) - Option SISR
 **Date :** Mai 2026
