@@ -485,22 +485,7 @@ journalctl -u user@*        # Logs utilisateur
 dmesg                       # Logs noyau
 ```
 
----
 
-## Checklist Finale
-
-- [ ] Xubuntu 22.04 LTS installé et à jour
-- [ ] Utilisateur "nutrifit" créé
-- [ ] Chromium Kiosk configuré et autostart fonctionnel
-- [ ] Raccourcis système désactivés
-- [ ] SSH actif et restreint par firewall
-- [ ] Tests de validation T1-T10 réussis
-- [ ] Snapshot de restauration créé et testé
-- [ ] Documentation sauvegardée
-- [ ] Accès admin documenté (identifiants sécurisés)
-
-**Validation finale :**
-Technicien : _____________ Date : _______ Signature : _______
 
 ---
 

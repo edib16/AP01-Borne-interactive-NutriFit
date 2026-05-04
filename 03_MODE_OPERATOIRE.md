@@ -16,7 +16,6 @@
 4. [Procédures Courantes](#4-procédures-courantes)
 5. [Problèmes et Solutions](#5-problèmes-et-solutions)
 6. [Maintenance de Base](#6-maintenance-de-base)
-7. [Contacts](#7-contacts)
 
 ---
 
@@ -354,73 +353,7 @@ Chaque intervention doit être documentée :
 └─────────────────────────────────────────┘
 ```
 
----
 
-## 7. Contacts
-
-### Support Technique Interne
-
-**Pour les problèmes de borne :**
-
-| Problème | Contact | Délai |
-|:---|:---|:---|
-| **Borne ne s'allume pas / Panne majeure** | Administrateur système | URGENT (< 1h) |
-| **Écran tactile défaillant** | Administrateur système | URGENT (< 1h) |
-| **Pas de connexion internet** | Administrateur réseau | 2-4h |
-| **Application plante régulièrement** | Équipe SLAM (développement) | 24h |
-| **Question sur l'utilisation** | Support niveau 1 | 2-4h |
-
-**Contacts :**
-```
-Administrateur Système (SISR)
-  📧 admin@iriesmediaschool.fr
-  📞 +33 (0) 1 XX XX XX XX
-  📍 Bâtiment A, Bureau 102
-
-Équipe SLAM (Développement)
-  📧 slam@iriesmediaschool.fr
-  📍 Bâtiment B, Laboratoire Informatique
-
-Support Niveau 1 (Accueil)
-  📞 +33 (0) 1 XX XX XX 00
-  📧 support@iriesmediaschool.fr
-```
-
-### Processus de Signalement
-
-**Étape 1 : Décrire le problème**
-```
-Exemple :
-  - Borne allumée depuis ce matin : OK
-  - Écran tactile ne répond plus depuis 10:30
-  - Redémarrage fait, toujours bloqué
-  - Heure actuelle : 11:45
-```
-
-**Étape 2 : Contact support (email ou téléphone)**
-```
-Joindre un technicien avec :
-  ✓ Nom / Localisation de la borne
-  ✓ Heure exacte du problème
-  ✓ Actions déjà effectuées
-  ✓ Votre numéro de téléphone
-```
-
-**Étape 3 : Intervention**
-```
-Le support prendra une action :
-  → Remise en marche à distance (si possible)
-  → Intervention sur site
-  → Remplacement temporaire (si nécessaire)
-```
-
-### Heures d'Ouverture Support
-
-```
-Lundi - Vendredi   : 08:00 - 18:00
-Samedi - Dimanche  : Fermé (urgence : 06 XX XX XX XX)
-Jours fériés       : Fermé
-```
 
 ---
 
