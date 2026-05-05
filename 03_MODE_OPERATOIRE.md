@@ -15,7 +15,6 @@
 3. [Accès et Utilisation](#3-accès-et-utilisation)
 4. [Procédures Courantes](#4-procédures-courantes)
 5. [Problèmes et Solutions](#5-problèmes-et-solutions)
-6. [Maintenance de Base](#6-maintenance-de-base)
 
 ---
 
@@ -276,84 +275,6 @@ Action : Attendre 10-30 secondes, NE PAS toucher
 ```
 
 ---
-
-## 6. Maintenance de Base
-
-### Nettoyage
-
-**Écran tactile (IMPORTANT)**
-```
-Fréquence : 1 fois par semaine
-
-Matériel :
-  ✓ Chiffon microfibre sec
-  ✓ Eau déminéralisée (si nécessaire)
-  ✗ Produits chimiques agressifs
-  ✗ Solvants
-
-Procédure :
-  1. Éteindre la borne (bouton 3 sec)
-  2. Attendre 5 minutes (refroidissement)
-  3. Essuyer délicatement l'écran (mouvements circulaires)
-  4. Laisser sécher 1 minute
-  5. Rallumer la borne
-```
-
-**Carcasse et ventilation**
-```
-Fréquence : 1 fois par mois
-
-  1. Éteindre la borne
-  2. Attendre 10 minutes
-  3. Essuyer la carcasse avec chiffon doux
-  4. Vérifier qu'aucune prise d'air n'est bouchée
-  5. Rallumer
-```
-
-### Vérifications Régulières
-
-**Quotidien (avant utilisation)**
-```
-  ✓ La borne démarre-t-elle ?
-  ✓ L'écran répond-il au toucher ?
-  ✓ L'application NutriFit charge-t-elle ?
-  ✓ Pas de messages d'erreur ?
-```
-
-**Hebdomadaire**
-```
-  ✓ Nettoyage de l'écran (voir ci-dessus)
-  ✓ Vérification câbles réseau (bien branchés ?)
-  ✓ Écoute : bruit anormal de ventilation ?
-```
-
-**Mensuel**
-```
-  ✓ Nettoyage carcasse
-  ✓ Vérification de l'espace disque (contact admin si besoin)
-  ✓ Test complet de toutes les fonctionnalités
-```
-
-### Documentation de Maintenance
-
-Chaque intervention doit être documentée :
-
-```
-┌─────────────────────────────────────────┐
-│ JOURNAL DE MAINTENANCE - Borne NutriFit │
-├─────────────────────────────────────────┤
-│ Date       : ________________           │
-│ Interv.    : ________________           │
-│ Type       : ☐ Nettoyage ☐ Redémarrage│
-│              ☐ Test ☐ Réparation       │
-│ Observations:                           │
-│ ________________                        │
-│ ________________                        │
-│ Signature  : ________________           │
-└─────────────────────────────────────────┘
-```
-
-
 
 ---
 

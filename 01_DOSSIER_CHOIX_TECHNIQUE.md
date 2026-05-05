@@ -90,27 +90,6 @@ Comment concevoir une borne interactive qui soit :
 └─────────────────────────────────────┘
 ```
 
-### Schéma Réseau
-
-```mermaid
-graph TD
-    A["Utilisateur <br/>(Écran tactile)"] -->|Interaction| B["Borne Kiosk <br/>(Xubuntu)"]
-    B -->|Affiche| C["Navigateur Chromium <br/>(Plein écran)"]
-    C -->|Requêtes HTTP| D["Application NutriFit <br/>(Web App)"]
-    D -->|Données| E["Backend / Base de données"]
-    
-    F["Admin Système"] -->|SSH (sécurisé)| B
-    F -->|Maintenance| G["Image de Restauration<br/>(USB / NAS)"]
-    
-    style A fill:#e1f5ff
-    style B fill:#fff3e0
-    style C fill:#f3e5f5
-    style D fill:#c8e6c9
-    style E fill:#ffebee
-    style F fill:#ffe0b2
-    style G fill:#ffe0b2
-```
-
 ---
 
 ## 4. Pré-requis Matériels et Logiciels

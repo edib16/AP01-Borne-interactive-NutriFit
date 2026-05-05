@@ -1,6 +1,6 @@
-# Réalisation Professionnelle (RP01) - Borne Kiosk NutriFit
+# Application Professionnelle (AP01) - Borne Kiosk NutriFit
 
-> 🌐 **Aperçu Visuel :** Retrouvez une présentation illustrée de ce projet sur mon portfolio : [edib16.github.io/Portfolio/#RP01](https://edib16.github.io/Portfolio/#RP01)
+> 🌐 **Aperçu Visuel :** Retrouvez une présentation illustrée de ce projet sur mon portfolio : [edib16.github.io/Portfolio/#AP01](https://edib16.github.io/Portfolio/#AP01)
 
 **Auteur :** Edib
 **Formation :** BTS SIO (Services Informatiques aux Organisations) - Option SISR
@@ -40,18 +40,18 @@ Ce projet m'a permis de mettre en œuvre et de valider les compétences suivante
 
 ```mermaid
 gantt
-    title Déploiement de la Borne NutriFit
+    title Deploiement de la Borne NutriFit
     dateFormat  YYYY-MM-DD
     section Analyse
-    Étude des besoins et contraintes :a1, 2026-04-15, 2d
-    Dossier de choix technique :a2, after a1, 2d
+    Etude des besoins :a1, 2026-04-15, 2d
+    Choix technique :a2, after a1, 2d
     section Maquettage
-    Déploiement en Machine Virtuelle :m1, 2026-04-19, 3d
-    Configuration Kiosk et Scripts :m2, after m1, 3d
-    section Déploiement
-    Installation sur matériel physique :d1, 2026-04-25, 2d
-    Sécurisation et hardening :d2, after d1, 2d
-    section Recette & Doc
+    Deploiement VM :m1, 2026-04-19, 3d
+    Config Kiosk :m2, after m1, 3d
+    section Deploiement
+    Installation physique :d1, 2026-04-25, 2d
+    Securisation :d2, after d1, 2d
+    section Recette et Doc
     Tests de validation :r1, 2026-04-29, 2d
-    Rédaction mode opératoire :r2, after r1, 2d
+    Redaction documentation :r2, after r1, 2d
 ```
