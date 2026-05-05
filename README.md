@@ -36,22 +36,13 @@ Ce projet m'a permis de mettre en œuvre et de valider les compétences suivante
 | **Bloc 3 : Cybersécurité des services informatiques** | **Protéger les données à caractère personnel** | Création d'un utilisateur restreint (`nutrifit`) sans droits d'administration. |
 | | **Préserver l'identité numérique de l’organisation** | Sécurisation des accès à la machine virtuelle (mode Kiosk strict, désactivation raccourcis, Firewall UFW). |
 
-## 4. Planning de Réalisation (Diagramme de Gantt)
+## 4. Jalons et Etapes du Projet
 
-```mermaid
-gantt
-    title Deploiement de la Borne NutriFit
-    dateFormat  YYYY-MM-DD
-    section Analyse
-    Etude des besoins :a1, 2026-04-15, 2d
-    Choix technique :a2, after a1, 2d
-    section Maquettage
-    Deploiement VM :m1, 2026-04-19, 3d
-    Config Kiosk :m2, after m1, 3d
-    section Deploiement
-    Installation physique :d1, 2026-04-25, 2d
-    Securisation :d2, after d1, 2d
-    section Recette et Doc
-    Tests de validation :r1, 2026-04-29, 2d
-    Redaction documentation :r2, after r1, 2d
-```
+| Phase | Activités Principales | Livrables |
+|:---|:---|:---|
+| **1. Analyse** | Étude des besoins Kiosk, benchmark des solutions (Xubuntu vs Debian). | Dossier de Choix Technique |
+| **2. Maquettage** | Déploiement de la VM, installation de l'OS et configuration de l'utilisateur restreint. | Machine Virtuelle de test |
+| **3. Sécurisation** | Durcissement du système (Hardening), désactivation des raccourcis clavier et scripts Kiosk. | Scripts d'automatisation |
+| **4. Validation** | Tests de robustesse, simulation de pannes et vérification du mode Kiosk. | Cahier de Recette |
+| **5. Livraison** | Finalisation des guides d'exploitation et mise au propre de la documentation. | Documentation complète |
+
